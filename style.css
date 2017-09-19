@@ -5,9 +5,11 @@
 p {
   border: 20px;
 }
+
 h1{
   text-align: center;
 }
+
 h1, h2 {
   border: 40px;
   color: DarkSlateGray;
