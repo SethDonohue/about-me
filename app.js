@@ -4,52 +4,77 @@
 // Use CSS to style your page as you see fit, to the level of abilities in CSS that you currently have
 // Add, Commit, Push process is being followed; it is evident in GitHub that commits are made regularly, and with good commit messages that explain the WHY of the commit.
 
-var userName = prompt('What is your name?');
-alert('Hi, ' + userName + ' nice to meet you. See if you can get the right answers to the following questions about me.');
+// var userName = prompt('What is your name?');
+// alert('Hi, ' + userName + ' nice to meet you. See if you can get the right answers to the following questions about me.');
 
-//Question 1
-var answer1 = prompt('Do I have 2 cars?').toLowerCase();
-console.log('2 cars? ' + answer1);
+var score = 0;
 
-if (answer1 === 'n' || answer1 === 'no') {
-  //Tell the user they are correct.
-  alert('You\'re right!');
-} else {
-  //Tell the user they are incorrect.
-  alert('You\'re incorrect, sorry!');
+// //Question 1
+// var answer1 = prompt('Do I have 2 cars?').toLowerCase();
+// console.log('2 cars? ' + answer1);
+//
+// if (answer1 === 'n' || answer1 === 'no') {
+//   //Tell the user they are correct.
+//   alert('You\'re right!');
+// } else {
+//   //Tell the user they are incorrect.
+//   alert('You\'re incorrect, sorry!');
+// }
+//
+// //Question 2
+// var answer2 = prompt('Do I like road trips?').toLowerCase();
+// console.log('Road Trips? ' + answer2);
+//
+// if (answer2 === 'y' || answer2 === 'yes') {
+//   //Tell the user they are correct.
+//   alert('You\'re right!');
+// } else {
+//   //Tell the user they are incorrect.
+//   alert('Doh! You\'re incorrect, sorry!');
+// }
+//
+// //Question 3
+// var answer3 = prompt('Do I live in Seattle?').toLowerCase();
+// console.log('Seattle is Home? ' + answer3);
+//
+// if (answer3 === 'y' || answer3 === 'yes') {
+//   //Tell the user they are correct.
+//   alert('You\'re right! That was an easy one... good luck with the next question.');
+// } else {
+//   //Tell the user they are incorrect.
+//   alert('Doh! You\'re wrong! Come on, that was an easy one!');
+// }
+// //Question 4
+// var answer4 = prompt('Do I like working with electronics, welding, blacksmithing, or just creative hobbies in general?').toLowerCase();
+// console.log('Creative Hobbies? ' + answer4);
+//
+// if (answer4 === 'y' || answer4 === 'yes') {
+//   //Tell the user they are correct.
+//   alert('You\'re right! That was actually an easy one too.');
+// } else {
+//   //Tell the user they are incorrect.
+//   alert('Doh! You\'re wrong! Come on, that was an easy one too!');
+// }
+
+// Question 6 Loop
+var answer6 = prompt('Guess how many times Seth has crashed a car while having too much fun...\n Only guess in actual numbers here of you may crash this page!');
+for (var i = 0; i < 4; i++) {
+  if (answer6 > 3) {
+    alert('What!?! I\'m not that bad of a driver.\n You guessed TOO HIGH. /nTry again.');
+  }else if (answer6 < 3) {
+    alert('Nope, too low of a guess. I\'m more adventerous than that! /nTry again.');
+  }else {
+    alert('Good Guess, that\'s   dead   on... and luckily my accidents weren\'t deadly.');
+    score++;
+    break;
+  }
 }
 
-//Question 2
-var answer2 = prompt('Do I like road trips?').toLowerCase();
-console.log('Road Trips? ' + answer2);
 
-if (answer2 === 'y' || answer2 === 'yes') {
-  //Tell the user they are correct.
-  alert('You\'re right!');
-} else {
-  //Tell the user they are incorrect.
-  alert('Doh! You\'re incorrect, sorry!');
-}
-
-//Question 3
-var answer3 = prompt('Do I live in Seattle?').toLowerCase();
-console.log('Seattle is Home? ' + answer3);
-
-if (answer3 === 'y' || answer3 === 'yes') {
-  //Tell the user they are correct.
-  alert('You\'re right! That was an easy one... good luck with the next question.');
-} else {
-  //Tell the user they are incorrect.
-  alert('Doh! You\'re wrong! Come on, that was an easy one!');
-}
-//Question 4
-var answer4 = prompt('Do I like working with electronics, welding, blacksmithing, or just creative hobbies in general?').toLowerCase();
-console.log('Creative Hobbies? ' + answer4);
-
-if (answer4 === 'y' || answer4 === 'yes') {
-  //Tell the user they are correct.
-  alert('You\'re right! That was actually an easy one too.');
-} else {
-  //Tell the user they are incorrect.
-  alert('Doh! You\'re wrong! Come on, that was an easy one too!');
+if(answer6 > 3) {
+  alert('What!?! I\'m not that bad of a driver.\n You guessed TOO HIGH, try again.')
+}else if (answer6 < 3) {
+  alert('Nope, too low of a guess. I\'m more adventerous than that!')
+}else {
+  alert('Good Guess, that\'s   dead   on... and luckily my accidents weren\'t deadly.')
 }
