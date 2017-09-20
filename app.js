@@ -1,4 +1,4 @@
-'use sctrict';
+'use strict';
 // The questions in the guessing game must require a mix of yes/no answers, and user input must accept either y/n or yes/no responses, with either .toUpperCase() or .toLowerCase() used to validate the user input and accommodate users entering all-caps Y/N or YES/NO answers, too.
 // Useful and descriptive console.log() messages in the JS are well written and correctly displaying to the browser console for each question of the guessing game.
 // Use CSS to style your page as you see fit, to the level of abilities in CSS that you currently have
@@ -56,25 +56,29 @@ var score = 0;
 //   alert('Doh! You\'re wrong! Come on, that was an easy one too!');
 // }
 
+var guessNumber = 1;
 // Question 6 Loop
-var answer6 = prompt('Guess how many times Seth has crashed a car while having too much fun...\n Only guess in actual numbers here of you may crash this page!');
-for (var i = 0; i < 4; i++) {
-  if (answer6 > 3) {
-    alert('What!?! I\'m not that bad of a driver.\n You guessed TOO HIGH. /nTry again.');
-  }else if (answer6 < 3) {
-    alert('Nope, too low of a guess. I\'m more adventerous than that! /nTry again.');
+var answer6 = parseInt(prompt('Guess how many times Seth has crashed a car while having too much fun...\n Only guess in actual numbers here or you may crash this page!'));
+
+while (guessNumber < 4) {
+  guessNumber++;
+  if (answer6 < 3) {
+    answer6 = prompt('Nope, too low of a guess. I\'m more adventerous than that! \nTry again.');
+    console.log('Too Low for Answer 6: ' + answer6);
+
+  }else if (answer6 > 3) {
+    answer6 = prompt('What!?! I\'m not that bad of a driver.\n You guessed TOO HIGH. \nTry again.');
+    console.log('Too High for Answer 6: ' + answer6);
+
   }else {
     alert('Good Guess, that\'s   dead   on... and luckily my accidents weren\'t deadly.');
+    console.log('Correct Answer 6: ' + answer6);
+    console.log('Guessnumber: ' + guessNumber);
     score++;
     break;
   }
-}
-
-
-if(answer6 > 3) {
-  alert('What!?! I\'m not that bad of a driver.\n You guessed TOO HIGH, try again.')
-}else if (answer6 < 3) {
-  alert('Nope, too low of a guess. I\'m more adventerous than that!')
-}else {
-  alert('Good Guess, that\'s   dead   on... and luckily my accidents weren\'t deadly.')
+  console.log('Guessnumber: ' + guessNumber);
+  if (guessNumber === 4) {
+    alert('Out of Tries');
+  }
 }
