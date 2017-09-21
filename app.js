@@ -56,12 +56,13 @@ var score = 0;
 //   alert('Doh! You\'re wrong! Come on, that was an easy one too!');
 // }
 
-var guessNumber = 1;
+
 // Question 6 Loop
+var guessNumber6 = 1;
 var answer6 = parseInt(prompt('Guess how many times Seth has crashed a car while having too much fun...\n Only guess in actual numbers here or you may crash this page!'));
 
-while (guessNumber < 4) {
-  guessNumber++;
+while (guessNumber6 < 4) {
+  guessNumber6++;
   if (answer6 < 3) {
     answer6 = prompt('Nope, too low of a guess. I\'m more adventerous than that! \nTry again.');
     console.log('Too Low for Answer 6: ' + answer6);
@@ -73,12 +74,58 @@ while (guessNumber < 4) {
   }else {
     alert('Good Guess, that\'s   dead   on... and luckily my accidents weren\'t deadly.');
     console.log('Correct Answer 6: ' + answer6);
-    console.log('Guessnumber: ' + guessNumber);
+    console.log('guessNumber6: ' + guessNumber6);
     score++;
     break;
   }
-  console.log('Guessnumber: ' + guessNumber);
-  if (guessNumber === 4) {
+  console.log('guessNumber6: ' + guessNumber6);
+  if (guessNumber6 === 4) {
     alert('Out of Tries');
   }
 }
+
+// Question 7 Loop, Guess a country I have lived in for more than 1 month
+//USA doesn't Count.
+//Be sure to enter the country names correctly and in all lowercase!
+
+var answerArray7 = ['a', 'n', 't'];
+var guessNumber7 = 0;
+
+
+while(guessNumber7 < 6) {
+
+  var answer = prompt('Question 7: Guess a country that I have lived in for longer than 1 month.');
+
+  for(i = 0; i < answerArray7.length; i++) {
+
+    if(answerArray7[i] === answer) {
+      alert('Good Guess! ' + answer + ' is one of them!');
+      // alert rest of answers from Array.
+      guessNumber7 = 6;
+    }
+  }
+  guessNumber7++;
+}
+
+// var correctAnswer7 = ['a', 'n', 't'];
+// var answer7 = prompt('Question 7: Guess a country that I have lived in for longer than 1 month.');
+// var guessNumber7 = 0;
+//
+//
+// while(guessNumber7 !==6) {
+//
+//   for(i = 0; i < correctAnswer7.length; i++) {
+//
+//     if(answer7 === correctAnswer7[i]) {
+//       alert('Good Guess! ' + answer7 + ' is one of them!');
+//       // alert rest of answers from Array.
+//       guessNumber7 === 6;
+//       break;
+//
+//     }else {
+//       //var answer7 = prompt('Wrong, guess again: ');
+//     }
+//
+//   }
+//   guessNumber7++;
+// }
