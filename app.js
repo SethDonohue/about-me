@@ -89,42 +89,26 @@ while (guessNumber6 < 4) {
 //Be sure to enter the country names correctly and in all lowercase!
 
 var answerArray7 = ['australia', 'new zealand', 'thailand'];
-var guessNumber7 = 0;
+var guessNumber7 = 6;
 
-while(guessNumber7 < 6) {
+while(guessNumber7 > 0) {
 
-  var answer = prompt('Question 7: Guess a country that I have lived in for longer than 1 month:');
+  var answer = prompt('Guess a country that I have lived in for longer than 1 month.\n You have ' + guessNumber7 + ' guesses left!');
 
   for(i = 0; i < answerArray7.length; i++) {
 
     if(answerArray7[i] === answer) {
       alert('Good Guess! ' + answer + ' is one of them!');
       // alert rest of answers from Array.
-      guessNumber7 = 6;
+      guessNumber7 = 0;
+      score++;
+    }
+    if(guessNumber7 === 0) {
+      alert('Sorry, you\'re out of guesses!');
     }
   }
-  guessNumber7++;
+  guessNumber7--;
 }
 
-var correctAnswer7 = ['a', 'n', 't'];
-var answer7 = prompt('Question 7: Guess a country that I have lived in for longer than 1 month.');
-var guessNumber7 = 0;
-
-
-while(guessNumber7 !==6) {
-
-  for(i = 0; i < correctAnswer7.length; i++) {
-
-    if(answer7 === correctAnswer7[i]) {
-      alert('Good Guess! ' + answer7 + ' is one of them!');
-      // alert rest of answers from Array.
-      guessNumber7 === 6;
-      break;
-
-    }else {
-      //var answer7 = prompt('Wrong, guess again: ');
-    }
-
-  }
-  guessNumber7++;
-}
+//Score Report
+alert('You scored ' + score + ' out of 7! Meh.');
