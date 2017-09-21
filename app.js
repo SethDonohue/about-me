@@ -93,7 +93,7 @@ var guessNumber7 = 0;
 
 while(guessNumber7 < 6) {
 
-  var answer = prompt('Question 7: Guess a country that I have lived in for longer than 1 month.');
+  var answer = prompt('Question 7: Guess a country that I have lived in for longer than 1 month:');
 
   for(i = 0; i < answerArray7.length; i++) {
 
