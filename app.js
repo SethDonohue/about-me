@@ -4,57 +4,57 @@
 // Use CSS to style your page as you see fit, to the level of abilities in CSS that you currently have
 // Add, Commit, Push process is being followed; it is evident in GitHub that commits are made regularly, and with good commit messages that explain the WHY of the commit.
 
-// var userName = prompt('What is your name?');
-// alert('Hi, ' + userName + ' nice to meet you. See if you can get the right answers to the following questions about me.');
+var userName = prompt('What is your name?');
+alert('Hi, ' + userName + ' nice to meet you. See if you can get the right answers to the following questions about me.');
 
 var score = 0;
 
 // //Question 1
-// var answer1 = prompt('Do I have 2 cars?').toLowerCase();
-// console.log('2 cars? ' + answer1);
-//
-// if (answer1 === 'n' || answer1 === 'no') {
-//   //Tell the user they are correct.
-//   alert('You\'re right!');
-// } else {
-//   //Tell the user they are incorrect.
-//   alert('You\'re incorrect, sorry!');
-// }
-//
+var answer1 = prompt('Do I have 2 cars?').toLowerCase();
+console.log('2 cars? ' + answer1);
+
+if (answer1 === 'n' || answer1 === 'no') {
+  //Tell the user they are correct.
+  alert('You\'re right!');
+} else {
+  //Tell the user they are incorrect.
+  alert('You\'re incorrect, sorry!');
+}
+
 // //Question 2
-// var answer2 = prompt('Do I like road trips?').toLowerCase();
-// console.log('Road Trips? ' + answer2);
-//
-// if (answer2 === 'y' || answer2 === 'yes') {
-//   //Tell the user they are correct.
-//   alert('You\'re right!');
-// } else {
-//   //Tell the user they are incorrect.
-//   alert('Doh! You\'re incorrect, sorry!');
-// }
-//
+var answer2 = prompt('Do I like road trips?').toLowerCase();
+console.log('Road Trips? ' + answer2);
+
+if (answer2 === 'y' || answer2 === 'yes') {
+  //Tell the user they are correct.
+  alert('You\'re right!');
+} else {
+  //Tell the user they are incorrect.
+  alert('Doh! You\'re incorrect, sorry!');
+}
+
 // //Question 3
-// var answer3 = prompt('Do I live in Seattle?').toLowerCase();
-// console.log('Seattle is Home? ' + answer3);
-//
-// if (answer3 === 'y' || answer3 === 'yes') {
-//   //Tell the user they are correct.
-//   alert('You\'re right! That was an easy one... good luck with the next question.');
-// } else {
-//   //Tell the user they are incorrect.
-//   alert('Doh! You\'re wrong! Come on, that was an easy one!');
-// }
+var answer3 = prompt('Do I live in Seattle?').toLowerCase();
+console.log('Seattle is Home? ' + answer3);
+
+if (answer3 === 'y' || answer3 === 'yes') {
+  //Tell the user they are correct.
+  alert('You\'re right! That was an easy one... good luck with the next question.');
+} else {
+  //Tell the user they are incorrect.
+  alert('Doh! You\'re wrong! Come on, that was an easy one!');
+}
 // //Question 4
-// var answer4 = prompt('Do I like working with electronics, welding, blacksmithing, or just creative hobbies in general?').toLowerCase();
-// console.log('Creative Hobbies? ' + answer4);
-//
-// if (answer4 === 'y' || answer4 === 'yes') {
-//   //Tell the user they are correct.
-//   alert('You\'re right! That was actually an easy one too.');
-// } else {
-//   //Tell the user they are incorrect.
-//   alert('Doh! You\'re wrong! Come on, that was an easy one too!');
-// }
+var answer4 = prompt('Do I like working with electronics, welding, blacksmithing, or just creative hobbies in general?').toLowerCase();
+console.log('Creative Hobbies? ' + answer4);
+
+if (answer4 === 'y' || answer4 === 'yes') {
+  //Tell the user they are correct.
+  alert('You\'re right! That was actually an easy one too.');
+} else {
+  //Tell the user they are incorrect.
+  alert('Doh! You\'re wrong! Come on, that was an easy one too!');
+}
 
 
 // Question 6 Loop
@@ -80,7 +80,7 @@ while (guessNumber6 < 4) {
   }
   console.log('guessNumber6: ' + guessNumber6);
   if (guessNumber6 === 4) {
-    alert('Out of Tries');
+    alert('Sorry, you\'re out of guesses!');
   }
 }
 
@@ -88,9 +88,8 @@ while (guessNumber6 < 4) {
 //USA doesn't Count.
 //Be sure to enter the country names correctly and in all lowercase!
 
-var answerArray7 = ['a', 'n', 't'];
+var answerArray7 = ['australia', 'new zealand', 'thailand'];
 var guessNumber7 = 0;
-
 
 while(guessNumber7 < 6) {
 
@@ -107,25 +106,25 @@ while(guessNumber7 < 6) {
   guessNumber7++;
 }
 
-// var correctAnswer7 = ['a', 'n', 't'];
-// var answer7 = prompt('Question 7: Guess a country that I have lived in for longer than 1 month.');
-// var guessNumber7 = 0;
-//
-//
-// while(guessNumber7 !==6) {
-//
-//   for(i = 0; i < correctAnswer7.length; i++) {
-//
-//     if(answer7 === correctAnswer7[i]) {
-//       alert('Good Guess! ' + answer7 + ' is one of them!');
-//       // alert rest of answers from Array.
-//       guessNumber7 === 6;
-//       break;
-//
-//     }else {
-//       //var answer7 = prompt('Wrong, guess again: ');
-//     }
-//
-//   }
-//   guessNumber7++;
-// }
+var correctAnswer7 = ['a', 'n', 't'];
+var answer7 = prompt('Question 7: Guess a country that I have lived in for longer than 1 month.');
+var guessNumber7 = 0;
+
+
+while(guessNumber7 !==6) {
+
+  for(i = 0; i < correctAnswer7.length; i++) {
+
+    if(answer7 === correctAnswer7[i]) {
+      alert('Good Guess! ' + answer7 + ' is one of them!');
+      // alert rest of answers from Array.
+      guessNumber7 === 6;
+      break;
+
+    }else {
+      //var answer7 = prompt('Wrong, guess again: ');
+    }
+
+  }
+  guessNumber7++;
+}
