@@ -26,6 +26,8 @@ function question1() {
   if (answer1 === 'n' || answer1 === 'no') {
     //Tell the user they are correct.
     alert('You\'re right!');
+    score++;
+    console.log(score);
   } else {
     //Tell the user they are incorrect.
     alert('You\'re incorrect, sorry!');
@@ -43,6 +45,8 @@ function question2() {
   if (answer2 === 'y' || answer2 === 'yes') {
     //Tell the user they are correct.
     alert('You\'re right!');
+    score++;
+    console.log(score);
   } else {
     //Tell the user they are incorrect.
     alert('Doh! You\'re incorrect, sorry!');
@@ -60,6 +64,8 @@ function question3() {
   if (answer3 === 'y' || answer3 === 'yes') {
     //Tell the user they are correct.
     alert('You\'re right! That was an easy one... good luck with the next question.');
+    score++;
+    console.log(score);
   } else {
     //Tell the user they are incorrect.
     alert('Doh! You\'re wrong! Come on, that was an easy one!');
@@ -77,6 +83,8 @@ function question4() {
   if (answer4 === 'y' || answer4 === 'yes') {
     //Tell the user they are correct.
     alert('You\'re right! That was actually an easy one too.');
+    score++;
+    console.log(score);
   } else {
     //Tell the user they are incorrect.
     alert('Doh! You\'re wrong! Come on, that was an easy one too!');
@@ -85,14 +93,37 @@ function question4() {
 
 question4();
 
+//Question 5
+function question5() {
+  var answer5 = prompt('Do I have a sister?').toLowerCase();
+  console.log('Sister? ' + answer5);
+
+  if (answer5 === 'n' || answer5 === 'no') {
+    //Tell the user they are correct.
+    alert('You\'re right! 50/50 chance, good guess.');
+    score++;
+    console.log(score);
+  } else {
+    //Tell the user they are incorrect.
+    alert('Doh! You\'re wrong! I have a brother');
+  }
+}
+
+question5();
+
 
 // Question 6 Loop
 function question6() {
-  var guessNumber6 = 1;
+  var guessNumber6 = 0;
   var answer6 = parseInt(prompt('Guess how many times Seth has crashed a car while having too much fun...\n Only guess in actual numbers here or you may crash this page!'));
 
   while (guessNumber6 < 4) {
     guessNumber6++;
+    console.log('guessNumber6: ' + guessNumber6);
+    if (guessNumber6 === 4) {
+      alert('Sorry, you\'re out of guesses!');
+      break;
+    }
     if (answer6 < 3) {
       answer6 = prompt('Nope, too low of a guess. I\'m more adventerous than that! \nTry again.');
       console.log('Too Low for Answer 6: ' + answer6);
@@ -106,11 +137,8 @@ function question6() {
       console.log('Correct Answer 6: ' + answer6);
       console.log('guessNumber6: ' + guessNumber6);
       score++;
+      console.log('score: ' + score);
       break;
-    }
-    console.log('guessNumber6: ' + guessNumber6);
-    if (guessNumber6 === 4) {
-      alert('Sorry, you\'re out of guesses!');
     }
   }
 }
@@ -130,18 +158,23 @@ function question7() {
     var answer = prompt('Guess a country that I have lived in for longer than 1 month.\n You have ' + guessNumber7 + ' guesses left!');
     guessNumber7--;
 
-    for(i = 0; i < answerArray7.length; i++) {
+    for(var i = 0; i < answerArray7.length; i++) {
 
       if(answerArray7[i] === answer) {
-        alert('Good Guess! ' + answer + ' is one of them!');
+        alert('Good Guess! ' + answer + ' is one of them! \n The answers were ' + answerArray7 + '.');
         // alert rest of answers from Array.
         guessNumber7 = -1;
         score++;
+        console.log(score);
+        break;
       }
     }
-    alert('Nope, I\'ve never lived there.');
+    if(guessNumber7 > 0) {
+      alert('Nope, I\'ve never lived there.');
+    }
+
     if(guessNumber7 === 0) {
-      alert('Sorry, you\'re out of guesses!');
+      alert('Sorry, you\'re out of guesses!\n The answers were ' + answerArray7 + '.');
     }
   }
 }
@@ -152,6 +185,6 @@ question7();
 //Score Report
 function scoreAlert() {
   alert('You scored ' + score + ' out of 7! Meh.');
+  console.log(score);
 }
-
 scoreAlert();
