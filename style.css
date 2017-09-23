@@ -1,19 +1,35 @@
 * {
   color: black;
-  background-color: rgb(207,100,249);
+  background-color: rgb(255,255,255);
+  border-width: 1px;
+  border-color: black;
+  position: relative;
+  top: 1px;
+  /*margin: 5px;*/
+  /*padding: 10px;*/
+  /*border-style: solid;*/
+  position: relative;
+  top: 10px;
 }
 
 p {
-  border: 20px;
+
 }
 
-h1{
-  text-align: center;
+h1 {
+  position: fixed;
+  padding: 0px;
+  top: 0px;
+  margin: 0px;
+  left: 0px;
+  width: 100%;
+  background-color: rgb(100,100,100);
+  z-index: 1;
 }
 
-h1, h2 {
-  border: 40px;
-  color: DarkSlateGray;
+h2.one {
   font-style: italic;
-  /*align-content: center;*/
+  /*position: absolute;*/
+  /*margin: 20px;*/
+  /*/align-content: right;*/
 }
