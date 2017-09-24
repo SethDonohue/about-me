@@ -154,12 +154,12 @@ function question7() {
     var answer = prompt('Guess a country that I have lived in for longer than 1 month.\n You have ' + guessNumber7 + ' guesses left!');
     guessNumber7--;
 
+
+    //playing with other options instead of loops for chekcing the arrays
     // var includesAnswer = answerArray7.includes(answer);
     // // var answerIndex = answerArray7.indexOf(answer);
-
-
     // if (answerIndex) {
-    //   //
+    // 
     // }
 
     for(var i = 0; i < answerArray7.length; i++) {

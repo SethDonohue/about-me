@@ -1,45 +1,82 @@
-/** {
-  color: black;
+* {
+  /*color: black;*/
   background-color: rgb(255,255,255);
   border-width: 1px;
-  border-color: black;
-  position: relative;
-  top: 1px;
+  border-color: green;
+  border-style: solid;
+  /*position: relative;*/
+  /*top: 1px;*/
   /*margin: 5px;*/
   /*padding: 10px;
-  border-style: solid;
-  position: relative;
-  top: 10px;
+  position: relative;*/
+  /*top: 20px;*/
 
-}*/
+}
+
+body{
+  position: absolute;
+  padding-top: 50px;
+  margin: 10px;
+}
+
 p {
-
+  padding: 10px 5px 0px 5px;
+  margin: 0 0 0 0;
 }
 
 h1 {
   position: fixed;
-  padding: 0px;
+  padding: 10px;
   top: 0px;
   margin: 0px;
   left: 0px;
   width: 100%;
   background-color: rgb(100,100,100);
   z-index: 1;
+  text-align: center;
 }
 
-h2.one {
-  font-style: italic;
-  /*position: absolute;*/
-  /*margin: 20px;*/
-  /*/align-content: right;*/
+h2, h3 {
+  /*padding: 10px 0 0 0;*/
+  margin: 0;
 }
 
-.List li {
-  padding: 10px 0;
+ul {
+  padding: 0 0 0 20px;
+  margin: 0 0 10px 0;
 }
 
+ol{
+  /*position: relative;*/
+  margin: 0;
+}
 
-/*
+.education li {
+  /*position: relative;*/
+  /*top: 0;*/
+  padding: 0;
+  list-style-type: none;
+}
+
+/*.goals li {
+  list-style-type: disc;
+}*/
+
+/*h4 {
+  padding: 0px 0;
+  margin: 0px 0;
+}*/
+
+.topTenList li {
+  padding: 0;
+}
+
+/*.education {
+  list-style-type: none;
+}*/
+
+
+/* Learning about Specificity from a friend
 
 [id][attribute][tag]
 
