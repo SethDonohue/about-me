@@ -1,4 +1,4 @@
-* {
+/** {
   color: black;
   background-color: rgb(255,255,255);
   border-width: 1px;
@@ -6,12 +6,12 @@
   position: relative;
   top: 1px;
   /*margin: 5px;*/
-  /*padding: 10px;*/
-  /*border-style: solid;*/
+  /*padding: 10px;
+  border-style: solid;
   position: relative;
   top: 10px;
-}
 
+}*/
 p {
 
 }
@@ -32,4 +32,45 @@ h2.one {
   /*position: absolute;*/
   /*margin: 20px;*/
   /*/align-content: right;*/
+}
+
+.List li {
+  padding: 10px 0;
+}
+
+
+/*
+
+[id][attribute][tag]
+
+[0][1][0]
+.someClass {
+  color:red;
+}
+
+[0][0][1]
+div {
+  color: blue;
+}
+
+Which one wins?
+[0][0][300]
+[0][1][0]
+
+
+
+*/
+.relative,
+.absolute {
+  height: 300px;
+  width: 100%;
+}
+.relative {
+  position: relative;
+  background: blue;
+}
+
+.absolute {
+  position: absolute;
+  background: red;
 }
